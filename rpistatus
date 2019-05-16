@@ -1,35 +1,13 @@
 #!/bin/bash
 
-index=1
+PIES = "rpi01 rpi02 rpi03 rpi04 rpi05 rpi06 rpi07 rpi08 rpi09 rpi10 rpi11 rpi12 rpi13 rpi14 rpi15 rpi16 rpi17 rpi18 rpi19 rpi20"
 
-<<<<<<< HEAD
-while 
-if [ rpi0index]
-then
-echo alive
-else
-echo dead
+for i in $PIES ; do
 
-=======
-while [ $index -lt 10]
-do
-  if ["ping -c 0 rpi0index"]
-  then
-    echo "alive"
-   else
-    echo "dead"
-  fi
-index = $(($index + 1))
+	ping $i -c 1 -w 1 &>/dev/null
+	if [ $? -eq 0 ] ; then
+		echo [$i] true/ALIVE
+	else
+		echo [$i] false/DEAD
+	fi
 done
-
-while [ $index -ge 10]
-do
-  if [0 -eq rpiindex]
-  then
-    echo "alive"
-   else
-    echo "dead"
-  fi
-index = $(($index + 1))
-done
->>>>>>> 02bb2359a0143c1908d30be178094c41e9f4f90f
