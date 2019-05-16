@@ -2,6 +2,7 @@
 
 index=1
 
+<<<<<<< HEAD
 while 
 if [ rpi0index]
 then
@@ -9,3 +10,24 @@ echo alive
 else
 echo dead
 
+=======
+while [ $index -lt 10]
+do
+  if [0 -eq rpi0index]
+  then
+    echo "alive"
+   else
+    echo "dead"
+  fi
+done
+
+while [ $index -gt 10]
+do
+  if [0 -eq rpiindex]
+  then
+    echo "alive"
+   else
+    echo "dead"
+  fi
+done
+>>>>>>> 02bb2359a0143c1908d30be178094c41e9f4f90f
