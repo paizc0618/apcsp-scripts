@@ -13,15 +13,16 @@ echo dead
 =======
 while [ $index -lt 10]
 do
-  if [0 -eq rpi0index]
+  if ["ping -c 0 rpi0index"]
   then
     echo "alive"
    else
     echo "dead"
   fi
+index = $(($index + 1))
 done
 
-while [ $index -gt 10]
+while [ $index -ge 10]
 do
   if [0 -eq rpiindex]
   then
@@ -29,5 +30,6 @@ do
    else
     echo "dead"
   fi
+index = $(($index + 1))
 done
 >>>>>>> 02bb2359a0143c1908d30be178094c41e9f4f90f
