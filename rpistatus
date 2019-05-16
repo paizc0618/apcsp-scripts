@@ -1,2 +1,23 @@
 #!/bin/bash
 
+index=1
+
+while [ $index -lt 10]
+do
+  if [0 -eq rpi0index]
+  then
+    echo "alive"
+   else
+    echo "dead"
+  fi
+done
+
+while [ $index -gt 10]
+do
+  if [0 -eq rpiindex]
+  then
+    echo "alive"
+   else
+    echo "dead"
+  fi
+done
